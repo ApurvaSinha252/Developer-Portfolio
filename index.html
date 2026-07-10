@@ -1,11 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Developer System | Apurva Sinha</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
+
 <body>
-    
+
+    <section id="boot-screen">
+
+        <div class="boot-log">
+
+            <div id="boot-output"></div>
+
+            <span class="cursor">█</span>
+
+        </div>
+
+    </section>
+
+    <section id="system-notice">
+
+        <div class="notice-panel">
+
+            <div class="panel-header">
+
+                <h1>SYSTEM NOTICE</h1>
+
+            </div>
+
+            <div class="panel-content">
+
+                <p>Recruiter Detected.</p>
+
+                <p>Candidate Profile Found.</p>
+
+                <br>
+
+                <p>
+                    Press ACCEPT to begin
+                    candidate evaluation.
+                </p>
+
+            </div>
+
+            <div class="panel-buttons">
+
+                <button id="accept-btn">
+
+                    ACCEPT
+
+                </button>
+
+                <button id="reject-btn">
+
+                    REJECT
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="evaluation-screen">
+
+    <div class="evaluation-panel">
+
+        <h1>EVALUATION STARTED</h1>
+
+        <p>Evaluation Protocol Activated.</p>
+
+        <p>Welcome, Recruiter.</p>
+
+    </div>
+
+</section>
+ <section id="mission-screen">
+
+    <div class="mission-panel">
+
+        <p class="system-label">MAIN MISSION</p>
+
+        <h1>Evaluate Candidate</h1>
+
+        <p class="mission-text">
+            Complete all Evaluation Phases to generate the final assessment.
+        </p>
+
+        <div class="difficulty">
+
+            <span>Difficulty</span>
+
+            <div class="stars">
+                ★★★★☆
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="phase-screen">
+
+    <div class="phase-panel">
+
+        <p id="phase-number" class="phase-title">
+    EVALUATION PHASE 01
+</p>
+
+<h1 id="phase-heading">
+    Verify Candidate Identity
+</h1>
+
+<p id="phase-objective" class="phase-objective">
+    Objective: Review Candidate Overview
+</p>
+
+        <button id="start-phase-btn">
+            START PHASE
+        </button>
+
+    </div>
+
+</section>
+
+<section id="overview-screen">
+
+    <div class="overview-panel">
+
+        <h1>CANDIDATE OVERVIEW</h1>
+
+        <div class="overview-top">
+
+            <div class="profile-picture">
+
+                APS
+
+            </div>
+
+            <div class="candidate-info">
+
+<pre>
+PROFILE INITIALIZED...
+
+> NAME         : APURVA SINHA
+> AGE          : 19
+> ROLE         : CSE Student (Data Science)
+> STATUS       : Second-Year Student
+> SPECIALTY    : Problem Solving
+> CURRENT SKILLS   : Python | Web Development | DSA
+> NEXT TARGET  : Full Stack Development
+> OBJECTIVE    : Grow into a Software Engineer
+</pre>
+
+</div>
+
+        </div>
+
+        <div class="about">
+        <br>
+            <h3>About Me</h3>
+
+            <p>
+            <br>
+                Curious CSE (Data Science) student passionate about learning,
+                building projects, and continuously improving through real-world
+                experiences.
+            <br>
+            </p>
+
+        </div>
+        <br>
+        <button id="complete-phase-btn">
+
+            COMPLETE PHASE
+
+        </button>
+
+    </div>
+
+</section>
+
+<section id="phase-complete-screen">
+
+    <div class="complete-panel">
+
+        <h1>PHASE COMPLETE</h1>
+
+<p id="complete-message">
+    ✓ Candidate Overview Verified
+</p>
+
+<p id="progress-text">
+    Evaluation Progress : 20%
+</p>
+
+    </div>
+
+</section>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
