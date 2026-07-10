@@ -12,71 +12,6 @@ const bootMessages = [
     "Launching Evaluation Interface..."
 ];
 
-const phases = [
-
-{
-
-number:1,
-
-title:"Verify Candidate Identity",
-
-objective:"Review Candidate Overview",
-
-complete:"✓ Candidate Overview Verified"
-
-},
-
-{
-
-number:2,
-
-title:"Analyze Technical Skills",
-
-objective:"Review Candidate Skill Tree",
-
-complete:"✓ Technical Skills Analyzed"
-
-},
-
-{
-
-number:3,
-
-title:"Inspect Project Archive",
-
-objective:"Evaluate Technical Projects",
-
-complete:"✓ Projects Successfully Evaluated"
-
-},
-
-{
-
-number:4,
-
-title:"Review Achievements",
-
-objective:"Verify Candidate Growth",
-
-complete:"✓ Achievements Verified"
-
-},
-
-{
-
-number:5,
-
-title:"Establish Communication",
-
-objective:"Access Contact Terminal",
-
-complete:"✓ Communication Channel Established"
-
-}
-
-];
-
-let currentPhase = 0;
 
 const bootOutput = document.getElementById("boot-output");
 
@@ -100,15 +35,45 @@ const completePhaseBtn = document.getElementById("complete-phase-btn");
 
 const phaseCompleteScreen = document.getElementById("phase-complete-screen");
 
-const phaseNumber = document.getElementById("phase-number");
+const phase2Screen = document.getElementById("phase2-screen");
 
-const phaseHeading = document.getElementById("phase-heading");
+const startPhase2Btn = document.getElementById("start-phase2-btn");
 
-const phaseObjective = document.getElementById("phase-objective");
+const skillsScreen = document.getElementById("skills-screen");
 
-const completeMessage = document.getElementById("complete-message");
+const completePhase2Btn = document.getElementById("complete-phase2-btn");
 
-const progressText = document.getElementById("progress-text");
+const phase2CompleteScreen = document.getElementById("phase2-complete-screen");
+
+const phase3Screen = document.getElementById("phase3-screen");
+
+const startPhase3Btn = document.getElementById("start-phase3-btn");
+
+const projectsScreen = document.getElementById("projects-screen");
+
+const completePhase3Btn = document.getElementById("complete-phase3-btn");
+
+const phase3CompleteScreen = document.getElementById("phase3-complete-screen");
+
+const phase4Screen = document.getElementById("phase4-screen");
+
+const startPhase4Btn = document.getElementById("start-phase4-btn");
+
+const achievementsScreen = document.getElementById("achievements-screen");
+
+const completePhase4Btn = document.getElementById("complete-phase4-btn");
+
+const phase4CompleteScreen = document.getElementById("phase4-complete-screen");
+
+const phase5Screen = document.getElementById("phase5-screen");
+
+const startPhase5Btn = document.getElementById("start-phase5-btn");
+
+const contactScreen = document.getElementById("contact-screen");
+
+const completePhase5Btn = document.getElementById("complete-phase5-btn");
+
+const missionCompleteScreen = document.getElementById("mission-complete-screen");
 
 let messageIndex = 0;
 
@@ -184,19 +149,6 @@ function showSystemNotice(){
 
 }
 
-function loadPhase(){
-
-    phaseNumber.textContent=
-    `EVALUATION PHASE ${phases[currentPhase].number}`;
-
-    phaseHeading.textContent=
-    phases[currentPhase].title;
-
-    phaseObjective.textContent=
-    `Objective: ${phases[currentPhase].objective}`;
-
-}
-
 window.onload=()=>{
 
     bootScreen.style.opacity="1";
@@ -247,8 +199,6 @@ setTimeout(() => {
 
     missionScreen.style.display = "none";
 
-    loadPhase();
-
 phaseScreen.style.display="flex";
 
     requestAnimationFrame(() => {
@@ -289,6 +239,7 @@ startPhaseBtn.addEventListener("click",()=>{
 
 });
 
+
 completePhaseBtn.addEventListener("click",()=>{
 
     overviewScreen.style.opacity="0";
@@ -305,59 +256,245 @@ completePhaseBtn.addEventListener("click",()=>{
 
         });
 
-        completeMessage.textContent =
-        phases[currentPhase].complete;
+        setTimeout(()=>{
 
-        progressText.textContent =
-        `Evaluation Progress : ${(currentPhase+1)*20}%`;
+            phaseCompleteScreen.style.opacity="0";
+
+            setTimeout(()=>{
+
+                phaseCompleteScreen.style.display="none";
+
+phase2Screen.style.display="flex";
+
+requestAnimationFrame(()=>{
+
+    phase2Screen.style.opacity="1";
+
+});
+
+            },500);
+
+        },1200);
+
+    },500);
+
+});
+
+startPhase2Btn.addEventListener("click",()=>{
+
+    phase2Screen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        phase2Screen.style.display="none";
+
+        skillsScreen.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            skillsScreen.style.opacity="1";
+
+        });
+
+    },500);
+
+});
+
+completePhase2Btn.addEventListener("click",()=>{
+
+    skillsScreen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        skillsScreen.style.display="none";
+
+        phase2CompleteScreen.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            phase2CompleteScreen.style.opacity="1";
+
+        });
 
         setTimeout(()=>{
 
-    if(currentPhase < phases.length - 1){
+            phase2CompleteScreen.style.opacity="0";
 
-    currentPhase++;
+            setTimeout(()=>{
 
-    loadPhase();
+                phase2CompleteScreen.style.display="none";
 
-    phaseCompleteScreen.style.opacity = "0";
+phase3Screen.style.display="flex";
+
+requestAnimationFrame(()=>{
+
+    phase3Screen.style.opacity="1";
+
+});
+
+            },500);
+
+        },1200);
+
+    },500);
+
+});
+
+startPhase3Btn.addEventListener("click",()=>{
+
+    phase3Screen.style.opacity="0";
 
     setTimeout(()=>{
 
-        phaseCompleteScreen.style.display = "none";
+        phase3Screen.style.display="none";
 
-        phaseScreen.style.display = "flex";
+        projectsScreen.style.display="flex";
 
         requestAnimationFrame(()=>{
 
-            phaseScreen.style.opacity = "1";
+            projectsScreen.style.opacity="1";
 
         });
 
     },500);
 
-}
+});
 
-else{
+completePhase3Btn.addEventListener("click",()=>{
 
-    // Final Evaluation Screen goes here
-
-}
+    projectsScreen.style.opacity="0";
 
     setTimeout(()=>{
 
-        phaseCompleteScreen.style.display = "none";
+        projectsScreen.style.display="none";
 
-        phaseScreen.style.display = "flex";
+        phase3CompleteScreen.style.display="flex";
 
         requestAnimationFrame(()=>{
 
-            phaseScreen.style.opacity = "1";
+            phase3CompleteScreen.style.opacity="1";
+
+        });
+
+        setTimeout(()=>{
+
+            phase3CompleteScreen.style.opacity="0";
+
+            setTimeout(()=>{
+
+                phase3CompleteScreen.style.display="none";
+
+phase4Screen.style.display="flex";
+
+requestAnimationFrame(()=>{
+
+    phase4Screen.style.opacity="1";
+
+});
+
+            },500);
+
+        },1200);
+
+    },500);
+
+});
+
+startPhase4Btn.addEventListener("click",()=>{
+
+    phase4Screen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        phase4Screen.style.display="none";
+
+        achievementsScreen.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            achievementsScreen.style.opacity="1";
 
         });
 
     },500);
 
-},1200);
+});
+
+completePhase4Btn.addEventListener("click",()=>{
+
+    achievementsScreen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        achievementsScreen.style.display="none";
+
+        phase4CompleteScreen.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            phase4CompleteScreen.style.opacity="1";
+
+        });
+
+        setTimeout(()=>{
+
+            phase4CompleteScreen.style.opacity="0";
+
+            setTimeout(()=>{
+
+                phase4CompleteScreen.style.display="none";
+
+                phase5Screen.style.display="flex";
+
+                requestAnimationFrame(()=>{
+
+                    phase5Screen.style.opacity="1";
+
+                });
+
+            },500);
+
+        },1200);
+
+    },500);
+
+});
+
+startPhase5Btn.addEventListener("click",()=>{
+
+    phase5Screen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        phase5Screen.style.display="none";
+
+        contactScreen.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            contactScreen.style.opacity="1";
+
+        });
+
+    },500);
+
+});
+
+completePhase5Btn.addEventListener("click",()=>{
+
+    contactScreen.style.opacity="0";
+
+    setTimeout(()=>{
+
+        contactScreen.style.display="none";
+
+        missionCompleteScreen.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            missionCompleteScreen.style.opacity="1";
+
+        });
 
     },500);
 

@@ -436,7 +436,11 @@ button{
     color:#FFD54A;
 
 }
-#phase-screen{
+#phase-screen,
+#phase2-screen,
+#phase3-screen,
+#phase4-screen,
+#phase5-screen{
 
     width:100vw;
     height:100vh;
@@ -595,5 +599,415 @@ button{
 .complete-panel p{
 
     line-height:2;
+
+}
+#skills-screen{
+
+    width:100vw;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:var(--bg);
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+.analysis-section{
+
+    margin:30px 0;
+
+}
+
+.analysis-section h3{
+
+    margin-bottom:15px;
+
+    color:#67e8f9;
+
+    letter-spacing:2px;
+
+    font-family:"Orbitron",sans-serif;
+
+}
+
+.skill-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 0;
+
+    border-bottom:1px solid rgba(103,232,249,.15);
+
+}
+
+.skill-row span:last-child{
+
+    color:#67e8f9;
+
+    letter-spacing:2px;
+
+}
+
+.focus-list{
+
+    padding-left:20px;
+
+    line-height:2;
+
+}
+
+#projects-screen{
+
+    width:100vw;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:var(--bg);
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+
+.archive-status{
+
+    color:#67e8f9;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.archive-count{
+
+    margin-top:8px;
+
+    margin-bottom:30px;
+
+    opacity:.8;
+
+}
+
+.project-card{
+
+    border:1px solid rgba(103,232,249,.25);
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 18px rgba(103,232,249,.25);
+
+}
+
+.project-id{
+
+    color:#67e8f9;
+
+    font-family:"Orbitron",sans-serif;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+
+}
+
+.project-status{
+
+    margin:12px 0;
+
+    font-size:.9rem;
+
+    color:#9eefff;
+
+}
+
+.tech-stack{
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+#phase2-complete-screen,
+#phase3-complete-screen,
+#phase4-complete-screen,
+#mission-complete-screen{
+
+    width:100vw;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+
+#achievements-screen{
+
+    width:100vw;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+
+#achievements-screen .overview-panel{
+
+    width:90%;
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+#achievements-screen h1{
+
+    margin-bottom:12px;
+
+}
+
+.archive-status{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:#67e8f9;
+
+}
+
+.achievement-list{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:22px;
+
+    margin:35px auto;
+
+}
+
+.achievement{
+
+    width:100%;
+    max-width:750px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:22px 28px;
+
+    border:1px solid #55e6ff;
+
+    border-radius:10px;
+
+    background:rgba(85,230,255,.05);
+
+    transition:.3s;
+
+}
+
+.achievement:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(103,232,249,.10);
+
+}
+
+.achievement-icon{
+
+    font-size:32px;
+
+    width:55px;
+
+    text-align:center;
+
+    flex-shrink:0;
+
+}
+
+.achievement div{
+
+    flex:1;
+
+    text-align:left;
+
+}
+
+.achievement h3{
+
+    margin-bottom:8px;
+
+    color:#67e8f9;
+
+    font-family:"Orbitron",sans-serif;
+
+}
+
+.achievement p{
+
+    line-height:1.6;
+
+}
+
+#complete-phase4-btn{
+
+    display:block;
+
+    margin:35px auto 0;
+
+}
+
+#contact-screen,
+#mission-complete-screen{
+
+    width:100vw;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+.contact-list{
+
+    width:80%;
+    max-width:700px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.contact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px 25px;
+
+    border:1px solid #55e6ff;
+
+    border-radius:8px;
+
+    background:rgba(85,230,255,.05);
+
+    transition:.3s;
+
+}
+
+.contact-item:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(85,230,255,.12);
+
+}
+
+.contact-icon{
+
+    font-size:2rem;
+
+    min-width:45px;
+
+    text-align:center;
+
+}
+
+.contact-item h3{
+
+    margin-bottom:8px;
+
+    color:#55e6ff;
+
+}
+
+.contact-item p{
+
+    color:#d7faff;
+
+    word-break:break-word;
+
+}
+
+#contact-screen h1{
+
+    text-align:center;
+
+}
+
+#complete-phase5-btn{
+
+    display:block;
+
+    margin:40px auto 0;
 
 }
